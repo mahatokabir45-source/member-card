@@ -1,153 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Ticket</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f4f7;
-            margin: 0;
-            padding: 20px;
-        }
-        .ticket {
-            max-width: 700px;
-            margin: 20px auto;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        .ticket-header {
-            background: #0b4f8a;
-            color: #fff;
-            padding: 20px;
-        }
-        .ticket-header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .section {
-            padding: 20px;
-            border-bottom: 1px solid #e0e4ea;
-        }
-        .section:last-child {
-            border-bottom: none;
-        }
-        .section h2 {
-            margin: 0 0 10px;
-            font-size: 18px;
-            color: #1a1e23;
-        }
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 15px;
-        }
-        .info-item {
-            display: flex;
-            flex-direction: column;
-        }
-        .info-item span:first-child {
-            font-size: 12px;
-            color: #64707a;
-            margin-bottom: 6px;
-        }
-        .info-item span:last-child {
-            font-size: 16px;
-            color: #172032;
-            font-weight: 600;
-        }
-        .passenger-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .passenger-list li {
-            margin: 10px 0;
-            padding: 12px;
-            background: #f8fafc;
-            border-radius: 8px;
-        }
-        .passenger-list li strong {
-            display: block;
-            margin-bottom: 4px;
-            color: #0b4f8a;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome Card</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at top, #1b2230, #0b0e14);
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    .card {
+        width: 350px;
+        padding: 25px;
+        border-radius: 15px;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 25px rgba(88,101,242,0.25);
+        text-align: center;
+        animation: pop 0.6s ease;
+    }
+
+    @keyframes pop {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #5865F2;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 15px;
+    }
+
+    .msg {
+        font-size: 15px;
+        line-height: 1.5;
+        color: #ddd;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        background: #5865F2;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #4752c4;
+    }
+</style>
+
 </head>
+
 <body>
-    <div class="ticket">
-        <div class="ticket-header">
-            <h1>Airline Reservation Ticket</h1>
-            <p>Flight #: AI-204 | Class: Economy | Boarding Pass</p>
-        </div>
-        <div class="section">
-            <h2>Route Information</h2>
-            <div class="info-grid">
-                <div class="info-item">
-                    <span>Departure</span>
-                    <span>New Delhi (DEL)</span>
-                </div>
-                <div class="info-item">
-                    <span>Arrival</span>
-                    <span>Kathmandu (KTM)</span>
-                </div>
-                <div class="info-item">
-                    <span>Date</span>
-                    <span>2026-06-15</span>
-                </div>
-                <div class="info-item">
-                    <span>Boarding Time</span>
-                    <span>08:10 AM</span>
-                </div>
-                <div class="info-item">
-                    <span>Departure Time</span>
-                    <span>08:50 AM</span>
-                </div>
-                <div class="info-item">
-                    <span>Gate</span>
-                    <span>12B</span>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <h2>Passenger Details</h2>
-            <ul class="passenger-list">
-                <li>
-                    <strong>Binayak Mahato</strong>
-                    <span>Seat: 18A</span>
-                    <span>PNR: BNK18A</span>
-                </li>
-                <li>
-                    <strong>Kabir Mahato</strong>
-                    <span>Seat: 18B</span>
-                    <span>PNR: KBR18B</span>
-                </li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Ticket Information</h2>
-            <div class="info-grid">
-                <div class="info-item">
-                    <span>Ticket Number</span>
-                    <span>095-4837192645</span>
-                </div>
-                <div class="info-item">
-                    <span>Booking Reference</span>
-                    <span>MKH2026</span>
-                </div>
-                <div class="info-item">
-                    <span>Cabin</span>
-                    <span>Economy</span>
-                </div>
-                <div class="info-item">
-                    <span>Status</span>
-                    <span>Confirmed</span>
-                </div>
-            </div>
-        </div>
+
+<div class="card">
+    <div class="title">Welcome to Noorvana Server 🎉</div>
+    <div class="subtitle">Glad to have you here!</div>
+
+    <div class="msg">
+        Hello new member 👋<br><br>
+        Welcome to <b>Noorvana</b> community.<br>
+        Follow rules, respect everyone, and enjoy your stay 💙<br><br>
+        Let’s grow together and build something amazing 🚀
     </div>
+
+    <button class="btn" onclick="alert('Welcome to Noorvana!')">
+        Get Started
+    </button>
+</div>
+
 </body>
 </html>
